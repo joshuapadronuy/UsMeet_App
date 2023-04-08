@@ -1,0 +1,29 @@
+.title {
+    margin: 15px;
+    width: 500px;
+    height: 120px;
+    padding: 8px 20px;
+    background-image: url("../public/jessica-delp-paper.jpg");
+    background-repeat: no-repeat;
+    background-size: 500px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px;
+}
+    .title h1 {
+        text-shadow: 2px 2px px #3d3d3d;
+    }
+
+.container {
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    border: 2px solid rgb(1, 1, 1);
+    width: 100%;
+}

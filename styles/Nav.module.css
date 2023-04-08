@@ -1,7 +1,7 @@
 .nav {
     height: 100px;
     padding: 6px 20px;
-    background: #6debba;
+    background: var(--primary100);
     color: #ffffff;
   }
   
@@ -27,7 +27,7 @@
 }
 
   .logo a:hover {
-    color: #4e77d0;
+    color: var(--accent100);
   }
 
 .mainMenu {

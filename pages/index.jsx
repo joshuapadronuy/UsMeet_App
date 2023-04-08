@@ -17,13 +17,7 @@ export default function Home() {
           <Header />
           <NavCard link={'/poll-availabilities'}>
             <div className={HomeStyles.cardContainer}>
-              <Image
-                src="/poll-colored.png"
-                alt="gradient calendar"
-                width={80}
-                height={80}
-              />
-              <h3>Try polling for availabilities</h3>
+              <h3>Try out polling for availabilities</h3>
             </div>
           </NavCard>
         </div>

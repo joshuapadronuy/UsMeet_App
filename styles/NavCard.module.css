@@ -2,7 +2,7 @@
     padding: 40px;
     background-color: rgb(255, 255, 255);
     border: 7px;
-    border-color: #6debba;
+    border-color: var(--primary100);
     border-style: solid;
     box-shadow: 10px 10px;
     display: flex;
