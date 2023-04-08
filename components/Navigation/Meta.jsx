@@ -14,7 +14,7 @@ const Meta = ({ title, keywords, description }) => {
 };
 
 Meta.defaultProps = {
-  title: "Us Meet",
+  title: "Pollaborate",
   keywords: "availability, poll",
   description: "ask for everyone's availability",
 };

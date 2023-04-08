@@ -5,13 +5,17 @@ import HomeStyles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={HomeStyles.rootContainer}>          
-      <Image
-        src="/blessing-ri-calendar-image.jpg"
-        alt="calendar in desk photo"
-        width={700}
-        height={700}
-      />
+    <div className={HomeStyles.rootContainer}>    
+      <div className={HomeStyles.image}>
+        <p>test</p>
+        <Image
+          src="/surface-collab.jpg"
+          alt="calendar in desk photo"
+          width={1000}
+          height={700}
+        />
+      </div>   
+      <p>test</p>
       {/* right container for welcome and card */}
       <div className={HomeStyles.rightSide}>
           <Header />
