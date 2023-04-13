@@ -2,15 +2,13 @@ import headerStyles from "../styles/Header.module.css";
 
 const Header = () => {
   return (
-    <div>
+    <div className={headerStyles.rootContainer}>
       <h1 className={headerStyles.title}>
-        Welcome to <span>UsMeet!</span> 
+        Welcome to <span>Pollaborate!</span> 
       </h1>
-      <div className={headerStyles.descriptionContainer}>
-        <p className={headerStyles.description}>
+      <p className={headerStyles.description}>
           Do a poll to know when everyone is free.
-        </p>
-      </div>
+      </p>
     </div>
   );
 };

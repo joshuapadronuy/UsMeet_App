@@ -1,0 +1,60 @@
+.container {
+    height: 80px;
+    width: 300px;
+    background-image: linear-gradient(to bottom right, rgb(246, 255, 143), rgb(249, 249, 113));
+    box-shadow: 5px 5px 10px #cecece;
+}
+    .container :hover {
+        height: 80px;
+        width: 300px;
+        background-image: linear-gradient(to bottom right, rgb(204, 88, 202), rgb(230, 116, 209));
+    }
+
+    .container input {
+        display: none
+    }
+
+    .container input:hover {
+        display: none
+    }
+    
+    .container label {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .container label:hover {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+.containerSelected {
+    height: 80px;
+    width: 300px;
+    background-image: linear-gradient(to bottom right, rgb(255, 146, 253), rgb(255, 125, 231));
+}
+
+    .containerSelected input {
+        display: none
+    }
+
+    .containerSelected label {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
+    }
+

@@ -6,3 +6,25 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
+.pollSection {
+    flex: 1;
+    padding: 0px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.selectionGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 100px;
+    width: 70%;
+    padding: 50px;
+}
+
+.gridItem {
+    width: 400px;
+}

@@ -28,6 +28,7 @@ a {
 }
 
 :root{
-  --primary100: #dcde3f;
+  --primary100: #faeb46;
+  --primary200: #fff7a3;
   --accent100: #8d64b7;
 }
