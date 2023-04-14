@@ -2,9 +2,9 @@ import Image from "next/image";
 import PageBannerStyles from "../../styles/PageBanner.module.css";
 
 
-const PageBanner = ({ children, imageSrc, alt }) => {
+const BannerImage = ({ children, size, imageSrc, alt }) => {
   return (
-    <div className={PageBannerStyles.banner}>
+    <div className={size == 'small' ? PageBannerStyles.bannerSmall : PageBannerStyles.bannerMedium}>
       <div className={PageBannerStyles.imageContainer}>
           <Image
           src={imageSrc}
@@ -13,11 +13,19 @@ const PageBanner = ({ children, imageSrc, alt }) => {
           objectFit="cover"
           />
       </div>
-      <div className={PageBannerStyles.content}>
-        {children}
-      </div>
+      {children}
     </div>
   )
 }
+
+const BannerContent = ({children}) => {
+  return (
+    <div className={PageBannerStyles.content}>
+      {children}
+    </div>
+  )
+}
+
+const PageBanner = { BannerImage, BannerContent }
 
 export default PageBanner

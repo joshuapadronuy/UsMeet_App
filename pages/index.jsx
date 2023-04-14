@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <div className={HomeStyles.rootContainer}>    
       {/* banner */}
-      <PageBanner imageSrc={"/surface-collab.jpg"} alt={"two people collaborating"}>
-        <Header />
-      </PageBanner>
+      <PageBanner.BannerImage size="medium" imageSrc={"/surface-collab.jpg"} alt={"two people collaborating"}>
+        <PageBanner.BannerContent>
+          <Header />
+        </PageBanner.BannerContent>
+      </PageBanner.BannerImage>
       {/* info section */}
       <section className={HomeStyles.infoSection}>
           <NavCard link={'/poll-availabilities'}>

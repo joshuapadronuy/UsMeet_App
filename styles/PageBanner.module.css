@@ -1,8 +1,16 @@
-.banner {
+.bannerMedium {
     position: relative;
     padding: 0px 400px;
     width: 100%;
     height: 40vh;
+    overflow: hidden;
+}
+
+.bannerSmall {
+    position: relative;
+    padding: 0px 400px;
+    width: 100%;
+    height: 20vh;
     overflow: hidden;
 }
 
