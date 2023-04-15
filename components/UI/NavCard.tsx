@@ -6,16 +6,14 @@ import SvgContainer from "./SvgContainer";
 const NavCard = ({ children, link }) => {
   return (
     <div className={CardStyles.container}>
-      <div className={CardStyles.content}>
-        {children}
-      </div>
+      <div className={CardStyles.content}>{children}</div>
       <Link href={link}>
         <SvgContainer>
           <ArrowRight />
         </SvgContainer>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default NavCard
+export default NavCard;

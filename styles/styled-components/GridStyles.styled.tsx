@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: #2196F3;
+  background-color: #2196f3;
   padding: 10px;
 `;
 
