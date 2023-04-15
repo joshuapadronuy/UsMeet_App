@@ -1,0 +1,7 @@
+.rootContainer {
+    display: grid;
+}
+
+.box {
+    border: 1px;
+}
