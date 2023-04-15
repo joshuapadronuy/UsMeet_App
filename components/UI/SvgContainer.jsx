@@ -1,9 +1,9 @@
 import SvgStyles from "../../styles/SvgContainer.module.css";
 
 
-const SvgContainer = ({ children }) => {
+const SvgContainer = ({ children, isClickable }) => {
   return (
-    <div className={SvgStyles.container}>{children}</div>
+    <div className={isClickable ? SvgStyles.clickable : SvgStyles.container}>{children}</div>
   )
 }
 

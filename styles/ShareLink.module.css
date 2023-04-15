@@ -21,6 +21,23 @@
         font-family: 'Permanent Marker', cursive;
     }
 
-    .content .link {
+
+
+.linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+    .linkContainer .link {
         color: blue
     }
+
+    .linkContainer .copied {
+        color: green
+    }
+
+.copiedTextDisplay {
+    background-color: red;
+}
