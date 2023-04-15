@@ -24,7 +24,7 @@ const PollAvailability = () => {
         <div className={PollAvailabilityStyle.selectionGrid}>
           {availabilityLinks.map((availLink) => {
             return (
-              <div className={PollAvailabilityStyle.gridItem}>
+              <div className={PollAvailabilityStyle.gridItem} key={availLink.name}>
                 <NavCard link={availLink.link}>
                   <h3>{camelize(availLink.name)}</h3>
                 </NavCard>

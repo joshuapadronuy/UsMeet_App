@@ -1,8 +1,11 @@
+import { StyledGridItem } from "../../../styles/styled-components/GridStyles.styled"
 
 
 const SelectionCell = () => {
   return (
-    <div>SelectionCell</div>
+    <StyledGridItem>
+      <div>SelectionCell</div>
+    </StyledGridItem>
   )
 }
 

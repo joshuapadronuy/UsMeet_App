@@ -1,4 +1,5 @@
-import SelectionGridStyles from "../../../styles/styled-components/SelectionGrid.module.css";
+import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
+import getDayTimeList from "../../../util/dates/getDayTimeList";
 import SelectionCell from "./SelectionCell";
 
 const SelectionGrid = ({rows, columns}) => {
@@ -6,11 +7,13 @@ const SelectionGrid = ({rows, columns}) => {
     const numberOfCells = rows * columns
     const cells = Array.from(Array(numberOfCells).keys())
 
+    const test = getDayTimeList()
+
   return (
-    <div className={SelectionGridStyles.rootContainer}>
+    <StyledGridContainer>
         <SelectionCell />
         {cells.map((item, i) => <SelectionCell key={i} />)}
-    </div>
+    </StyledGridContainer>
   )
 }
 
