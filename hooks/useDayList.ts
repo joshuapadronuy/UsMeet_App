@@ -1,11 +1,20 @@
 import { useReducer } from "react";
 import { DAY_TIME_LIST } from "../constants/day-time-list";
 import { DATE_TIME_LIST_ACTIONS } from "../enum/date-time-list-actions";
+import { IDayTimeList } from "../types/DayTimeList";
 
-const dayTimeListReducer = (state, action) => {
+interface IAction {
+  type: string;
+  payload: {
+    dayName?: string;
+    time?: string;
+  };
+}
+
+const dayTimeListReducer = (state: IDayTimeList, action: IAction) => {
   switch (action.type) {
     case DATE_TIME_LIST_ACTIONS.SET_NAME:
-      return { ...state, dayName: action.payload };
+      return { ...state, dayName: action.payload.dayName };
     case DATE_TIME_LIST_ACTIONS.TOGGLE_IS_SELECTED:
       const timeItemIndex = state.timeList.findIndex(
         (timeItem) => timeItem.time === action.payload.time
@@ -18,8 +27,8 @@ const dayTimeListReducer = (state, action) => {
   }
 };
 
-const useDayTimeList = (dayName) => {
-  const initialState = {
+const useDayTimeList = (dayName: string) => {
+  const initialState: IDayTimeList = {
     dayName: dayName,
     timeList: DAY_TIME_LIST,
   };

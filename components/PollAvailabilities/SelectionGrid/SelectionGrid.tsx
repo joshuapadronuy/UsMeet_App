@@ -1,19 +1,32 @@
+import { v4 as UUIDv4 } from "uuid";
+
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
-import getDayTimeList from "../../../util/dates/getDayTimeList";
+import { ITimeItem } from "../../../types/TimeItem";
 import SelectionCell from "./SelectionCell";
+import { SELECTION_CELL_TYPES } from "../../../enum/selection-cell";
+import { useState } from "react";
 
-const SelectionGrid = ({ rows, columns }) => {
-  const numberOfCells = rows * columns;
-  const cells = Array.from(Array(numberOfCells).keys());
+interface IProps {
+  columns: number;
+  list: (ITimeItem | string)[];
+}
 
-  const test = getDayTimeList();
-
+const SelectionGrid = ({ columns, list }: IProps) => {
   return (
-    <StyledGridContainer>
-      <SelectionCell />
-      {cells.map((item, i) => (
-        <SelectionCell key={i} />
-      ))}
+    <StyledGridContainer columns={columns}>
+      {list.map((item, i) => {
+        return (
+          <SelectionCell
+            key={UUIDv4()}
+            item={item}
+            type={
+              i === 0
+                ? SELECTION_CELL_TYPES.TEXT
+                : SELECTION_CELL_TYPES.TIMESLOT
+            }
+          />
+        );
+      })}
     </StyledGridContainer>
   );
 };
