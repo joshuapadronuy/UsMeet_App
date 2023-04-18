@@ -1,12 +1,12 @@
 import React from "react";
-import SelectionGrid from "./SelectionGrid";
+import SelectionGrid from "../GridComponents/SelectionGrid";
 import { DAYS_OF_WEEK } from "../../../enum/days-of-week";
 import useDayTimeList from "../../../hooks/useDayList";
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
 import { ITimeItem } from "../../../types/TimeItem";
 import OnMouseDownListener from "../../Events/on-mouse-down-listener";
 
-const WeeklyGrid = () => {
+const WeeklySelectionGrid = () => {
   const { state: sundayState, dispatch: sundayDispatch } = useDayTimeList(
     DAYS_OF_WEEK.SUNDAY
   );
@@ -29,30 +29,19 @@ const WeeklyGrid = () => {
     DAYS_OF_WEEK.SATURDAY
   );
 
-  const sundayGridList = [DAYS_OF_WEEK.SUNDAY, ...sundayState.timeList];
-  const mondayGridList = [DAYS_OF_WEEK.MONDAY, ...mondayState.timeList];
-  const tuesdayGridList = [DAYS_OF_WEEK.TUESDAY, ...tuesdayState.timeList];
-  const wednesdayGridList = [
-    DAYS_OF_WEEK.WEDNESDAY,
-    ...wednesdayState.timeList,
-  ];
-  const thursdayGridList = [DAYS_OF_WEEK.THURSDAY, ...thursdayState.timeList];
-  const fridayGridList = [DAYS_OF_WEEK.FRIDAY, ...fridayState.timeList];
-  const saturdayGridList = [DAYS_OF_WEEK.SATURDAY, ...saturdayState.timeList];
-
   return (
     <OnMouseDownListener>
-      <StyledGridContainer columns={7}>
-        <SelectionGrid columns={1} list={sundayGridList} />
-        <SelectionGrid columns={1} list={mondayGridList} />
-        <SelectionGrid columns={1} list={tuesdayGridList} />
-        <SelectionGrid columns={1} list={wednesdayGridList} />
-        <SelectionGrid columns={1} list={thursdayGridList} />
-        <SelectionGrid columns={1} list={fridayGridList} />
-        <SelectionGrid columns={1} list={saturdayGridList} />
+      <StyledGridContainer columnsTemplate={"repeat(7, 1fr)"}>
+        <SelectionGrid columns={1} list={sundayState.timeList} />
+        <SelectionGrid columns={1} list={mondayState.timeList} />
+        <SelectionGrid columns={1} list={tuesdayState.timeList} />
+        <SelectionGrid columns={1} list={wednesdayState.timeList} />
+        <SelectionGrid columns={1} list={thursdayState.timeList} />
+        <SelectionGrid columns={1} list={fridayState.timeList} />
+        <SelectionGrid columns={1} list={saturdayState.timeList} />
       </StyledGridContainer>
     </OnMouseDownListener>
   );
 };
 
-export default WeeklyGrid;
+export default WeeklySelectionGrid;

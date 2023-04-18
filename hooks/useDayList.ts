@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { DAY_TIME_LIST } from "../constants/day-time-list";
+import { DAY_TIME_CELL_LIST } from "../constants/day-time-cell-list";
 import { DATE_TIME_LIST_ACTIONS } from "../enum/date-time-list-actions";
 import { IDayTimeList } from "../types/DayTimeList";
 
@@ -30,7 +30,7 @@ const dayTimeListReducer = (state: IDayTimeList, action: IAction) => {
 const useDayTimeList = (dayName: string) => {
   const initialState: IDayTimeList = {
     dayName: dayName,
-    timeList: DAY_TIME_LIST,
+    timeList: DAY_TIME_CELL_LIST,
   };
 
   const [state, dispatch] = useReducer(dayTimeListReducer, initialState);

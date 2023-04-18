@@ -2,7 +2,10 @@ import { useRouter } from "next/router";
 import ShareLink from "../../../components/PollAvailabilities/ShareLink";
 import PageBanner from "../../../components/UI/PageBanner";
 import PollWeeklyStyles from "../../../styles/PollWeekly.module.css";
-import WeeklyGrid from "../../../components/PollAvailabilities/SelectionGrid/WeeklyGrid";
+import WeeklySelectionGrid from "../../../components/PollAvailabilities/Weekly/WeeklySelectionGrid";
+import WeeklyGridHeader from "../../../components/PollAvailabilities/Weekly/WeeklyGridHeader";
+import WeeklyGridTimeLabels from "../../../components/PollAvailabilities/Weekly/WeeklyGridTimeLabels";
+import WeeklyGrid from "../../../components/PollAvailabilities/Weekly/WeeklyGrid";
 
 const PollAvailability = () => {
   const router = useRouter();

@@ -2,7 +2,7 @@ import { ITimeItem } from "../types/TimeItem";
 
 //initial value for day time list
 
-export const DAY_TIME_LIST: ITimeItem[] = [
+export const DAY_TIME_CELL_LIST: ITimeItem[] = [
   { time: "00:00", isSelected: false },
   { time: "00:30", isSelected: false },
   { time: "01:00", isSelected: false },
