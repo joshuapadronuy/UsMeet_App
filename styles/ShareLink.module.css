@@ -1,43 +1,41 @@
 .rootContainer {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-style: ridge;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: ridge;
 }
 
 .content p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 10px;
 }
 
-    .content p {
-        font-family: 'Permanent Marker', cursive;
-    }
-
-
+.content p {
+  font-family: "Permanent Marker", cursive;
+}
 
 .linkContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-    .linkContainer .link {
-        color: blue
-    }
+.linkContainer .link {
+  color: var(--accent200);
+}
 
-    .linkContainer .copied {
-        color: green
-    }
+.linkContainer .copied {
+  color: green;
+}
 
 .copiedTextDisplay {
-    background-color: red;
+  background-color: red;
 }

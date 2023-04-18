@@ -23,7 +23,7 @@ const SelectionCell = ({ timeItem }: IProps) => {
       } else {
         setIsSelected(false);
       }
-    } else if (event.type == "click") {
+    } else if (event.type == "mousedown") {
       setIsSelected((currIsSelected) => !currIsSelected);
     }
   };
@@ -32,7 +32,7 @@ const SelectionCell = ({ timeItem }: IProps) => {
     <StyledGridItem isSelected={isSelected}>
       <div
         onMouseEnter={(e) => toggleSelectedHandler(e)}
-        onClick={(e) => toggleSelectedHandler(e)}
+        onMouseDown={(e) => toggleSelectedHandler(e)}
       >
         {timeItem.time}
       </div>

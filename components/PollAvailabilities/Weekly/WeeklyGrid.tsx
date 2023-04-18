@@ -5,11 +5,11 @@ import WeeklySelectionGrid from "./WeeklySelectionGrid";
 
 const WeeklyGrid = () => {
   return (
-    <StyledGridContainer columnsTemplate={"1fr 9fr"}>
-      <div />
+    <StyledGridContainer columnsTemplate={"1fr 20fr"}>
       <WeeklyGridHeader />
       <WeeklyGridTimeLabels />
       <WeeklySelectionGrid />
+      <div>Test</div>
     </StyledGridContainer>
   );
 };

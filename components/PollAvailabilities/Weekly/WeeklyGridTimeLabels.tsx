@@ -1,16 +1,13 @@
-import React from "react";
-import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
-import TextCell from "../GridComponents/Cells/TextCell";
+import TimeLabelsStyles from "../../../styles/WeeklyGridTimeLabels.module.css";
 import { DAY_TIME_LABEL_LIST } from "../../../constants/day-time-label-list";
 
 const WeeklyGridTimeLabels = () => {
   return (
-    <StyledGridContainer columnsTemplate={"repeat(1, 1fr)"}>
-      <div />
+    <div className={TimeLabelsStyles.rootContainer}>
       {DAY_TIME_LABEL_LIST.map((day) => (
-        <TextCell text={day} />
+        <div className={TimeLabelsStyles.labelCell}>{day}</div>
       ))}
-    </StyledGridContainer>
+    </div>
   );
 };
 
