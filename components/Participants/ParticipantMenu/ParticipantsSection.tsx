@@ -4,13 +4,16 @@ import ParticipantsSectionStyles from "../../../styles/ParticipantsSection.modul
 
 const ParticipantsSection = () => {
   return (
-    <div>
+    <div className={ParticipantsSectionStyles.rootContainer}>
       {/* header */}
       <div className={ParticipantsSectionStyles.header}>
         <h2>Participants</h2>
       </div>
-      <AddParticipant />
-      <SearchParticipant />
+      {/* search and add new participant */}
+      <div>
+        <AddParticipant />
+        <SearchParticipant />
+      </div>
       <p>participantList</p>
     </div>
   );
