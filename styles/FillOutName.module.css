@@ -1,0 +1,9 @@
+.enterName {
+  background-color: var(--transparent200);
+}
+
+.enterName p {
+  font-size: large;
+  color: white;
+  padding: 20px 20px 0px 20px;
+}

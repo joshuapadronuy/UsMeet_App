@@ -5,7 +5,7 @@ import PageBanner from "../../../components/UI/PageBanner";
 import PollWeeklyStyles from "../../../styles/PollWeekly.module.css";
 import WeeklyGrid from "../../../components/PollAvailabilities/Weekly/WeeklyGrid";
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
-import ParticipantsSection from "../../../components/Participants/ParticipantMenu/ParticipantsSection";
+import ParticipantsSection from "../../../components/Participants/ParticipantsSection";
 
 const PollAvailability = () => {
   const router = useRouter();

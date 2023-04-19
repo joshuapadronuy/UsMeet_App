@@ -1,7 +1,8 @@
-import AddParticipant from "./AddParticipant";
-import ParticipantsSectionStyles from "../../../styles/ParticipantsSection.module.css";
-import SearchField from "../../UI/SearchField";
+import AddParticipant from "./ParticipantMenu/AddParticipant";
+import ParticipantsSectionStyles from "../../styles/ParticipantsSection.module.css";
+import TextField from "../UI/TextField";
 import { useState } from "react";
+import FillOutName from "./ParticipantMenu/FillOutName";
 
 const ParticipantsSection = () => {
   const [showAddParticipant, setShowAddParticipant] = useState(false);
@@ -18,11 +19,11 @@ const ParticipantsSection = () => {
       </div>
       {/* search and add new participant */}
       <div className={ParticipantsSectionStyles.tools}>
-        <SearchField placeholder="Search Participant..." />
+        <TextField placeholder="Search Participant..." />
         <AddParticipant onClickHandler={toggleAddParticipant} />
       </div>
-      {showAddParticipant && <div>showAddParticipant</div>}
-      <p>participantList</p>
+      {/* adding new participant field */}
+      {showAddParticipant && <FillOutName />}
     </div>
   );
 };

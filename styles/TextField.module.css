@@ -1,13 +1,13 @@
 .rootContainer {
-  background-color: var(--transparent);
+  background-color: var(--transparent100);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.search {
-  background-color: var(--transparent);
+.textField {
+  background-color: var(--transparent100);
   color: black;
   padding: 10px 20px;
   margin: 10px;

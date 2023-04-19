@@ -1,10 +1,10 @@
 .rootContainer {
-  background-color: var(--transparent);
+  background-color: var(--transparent100);
   padding: 9.5px;
   border-left: solid;
   border-left-color: rgb(57, 57, 57);
 }
 
-.rootContainer :hover {
+.rootContainer:hover {
   opacity: 0.8;
 }
