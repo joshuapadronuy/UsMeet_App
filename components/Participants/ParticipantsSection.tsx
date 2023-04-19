@@ -3,6 +3,7 @@ import ParticipantsSectionStyles from "../../styles/ParticipantsSection.module.c
 import TextField from "../UI/TextField";
 import { useState } from "react";
 import FillOutName from "./ParticipantMenu/FillOutName";
+import ParticipantsList from "./ParticipantsList/ParticipantsList";
 
 const ParticipantsSection = () => {
   const [showAddParticipant, setShowAddParticipant] = useState(false);
@@ -24,6 +25,7 @@ const ParticipantsSection = () => {
       </div>
       {/* adding new participant field */}
       {showAddParticipant && <FillOutName />}
+      <ParticipantsList />
     </div>
   );
 };
