@@ -1,12 +1,16 @@
 import SearchFieldStyles from "../../styles/SearchField.module.css";
 
-const SearchField = () => {
+interface IProps {
+  placeholder: string;
+}
+
+const SearchField = ({ placeholder }: IProps) => {
   return (
     <div className={SearchFieldStyles.rootContainer}>
       <input
         className={SearchFieldStyles.search}
         type="text"
-        placeholder="Search Participant..."
+        placeholder={placeholder}
       />
     </div>
   );

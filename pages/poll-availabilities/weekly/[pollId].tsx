@@ -28,7 +28,7 @@ const PollAvailability = () => {
         </PageBanner.BannerImage>
       </section>
       {/* poll section */}
-      <section>
+      <section className={PollWeeklyStyles.pollSection}>
         <StyledGridContainer columnsTemplate={"4fr 1fr"}>
           <WeeklyGrid />
           <ParticipantsSection />

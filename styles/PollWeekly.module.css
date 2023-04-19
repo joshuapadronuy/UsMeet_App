@@ -1,8 +1,12 @@
 .rootContainer {
-    width: 100%;
-    flex: 1
+  width: 100%;
+  flex: 1;
 }
 
 .banner {
-    width: 100%;
+  width: 100%;
+}
+
+.pollSection {
+  padding: 10px;
 }

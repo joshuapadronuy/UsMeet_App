@@ -1,18 +1,18 @@
 .rootContainer {
-  background-color: rgb(83, 49, 93);
-  box-shadow: 3px 3px 2px 2px #757575;
-  width: 220px;
+  background-color: var(--transparent);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--transparent);
   color: black;
   padding: 10px 20px;
   margin: 10px;
   border-radius: 25px;
   font-size: 16px;
-  width: 200px;
+  width: 100%;
+  font-family: Signika Negative, sans-serif;
 }
