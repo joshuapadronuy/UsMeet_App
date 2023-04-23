@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from "react";
-import SvgContainer from "../../UI/SvgContainer";
 import UserPlus from "../../../public/svgs/UserPlus";
 import AddParticipantStyles from "../../../styles/AddParticipant.module.css";
+import { StyledSvgContainer } from "../../../styles/styled-components/SvgContainerStyles.styled";
 
 interface IProps {
   onClickHandler: MouseEventHandler<HTMLDivElement>;
@@ -13,9 +13,9 @@ const AddParticipant = ({ onClickHandler }: IProps) => {
       className={AddParticipantStyles.rootContainer}
       onClick={onClickHandler}
     >
-      <SvgContainer>
+      <StyledSvgContainer>
         <UserPlus />
-      </SvgContainer>
+      </StyledSvgContainer>
     </div>
   );
 };

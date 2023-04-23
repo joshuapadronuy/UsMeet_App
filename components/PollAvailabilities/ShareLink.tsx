@@ -2,7 +2,7 @@ import { useState } from "react";
 import ShareLinkStyles from "../../styles/ShareLink.module.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Clipboard from "../../public/svgs/Clipboard";
-import SvgContainer from "../UI/SvgContainer";
+import { StyledSvgContainer } from "../../styles/styled-components/SvgContainerStyles.styled";
 
 const ShareLink = ({ link }) => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -21,9 +21,9 @@ const ShareLink = ({ link }) => {
           </p>
           <CopyToClipboard text={link} onCopy={() => setHasCopied(true)}>
             <div>
-              <SvgContainer isClickable={true}>
+              <StyledSvgContainer isClickable={true}>
                 <Clipboard />
-              </SvgContainer>
+              </StyledSvgContainer>
             </div>
           </CopyToClipboard>
           {hasCopied ? <p>Copied</p> : <div />}
