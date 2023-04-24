@@ -1,15 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as UUIDv4 } from "uuid";
+
 import { IParticipantsAction } from "../../types/ParticipantsAction";
 import { IParticipantsState } from "../../types/ReduxState";
 
 const MOCK_PARTICIPANTS = [
-  "Joshua",
-  "Ron",
-  "Sewart",
-  "Hansel",
-  "Ron",
-  "Sewart",
-  "Hansel",
+  { id: "fj2398fj2", name: "Joshua" },
+  { id: "f23f2f", name: "Ron" },
+  { id: "fdsaf", name: "Sewart" },
+  { id: "vadv", name: "Hansel" },
+  { id: "bvxb", name: "Ron" },
+  { id: "hfgs", name: "Sewart" },
+  { id: "kuk6", name: "Hansel" },
 ];
 
 const initialState: IParticipantsState = {
@@ -28,21 +30,24 @@ export const participantsSlice = createSlice({
     setSearchInput: (state, action: IParticipantsAction) => {
       state.searchInput = action.payload.searchInput;
     },
+    //TODO IMPLEMENT
     addParticipant: (state, action: IParticipantsAction) => {
-      const newParticipant = action.payload.participantName;
+      const name = action.payload.participantName;
+      const newParticipant = { id: UUIDv4(), name: name };
       state.participantsList.push(newParticipant);
     },
+    //TODO IMPLEMENT
     updateParticipant: (state, action: IParticipantsAction) => {
-      const selectedParticipant = action.payload.index;
+      const selectedParticipant = action.payload.id;
       const newName = action.payload.newName;
-      state.participantsList[selectedParticipant] = newName;
+      state.participantsList[selectedParticipant].name = newName;
     },
     removeParticipant: (state, action: IParticipantsAction) => {
-      const selectedParticipant = action.payload.index;
-      // only splice array when item is found
-      if (selectedParticipant > -1) {
-        state.participantsList.splice(selectedParticipant, 1); // 2nd parameter means remove one item only
-      }
+      const selectedParticipant = action.payload.id;
+      const filteredParticipants = state.participantsList.filter(
+        (participant) => participant.id !== selectedParticipant
+      );
+      state.participantsList = filteredParticipants;
     },
   },
 });

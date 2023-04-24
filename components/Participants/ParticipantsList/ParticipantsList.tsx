@@ -1,7 +1,7 @@
 import Participant from "./Participant";
 import ParticipantsListStyles from "../../../styles/ParticipantsList.module.css";
 import { useSelector } from "react-redux";
-import { IReduxState } from "../../../types/ReduxState";
+import { IParticipant, IReduxState } from "../../../types/ReduxState";
 
 const ParticipantsList = () => {
   const { participantsList, searchInput } = useSelector(
@@ -9,7 +9,7 @@ const ParticipantsList = () => {
   );
 
   const filteredParticipants = participantsList.filter((participant) =>
-    participant.includes(searchInput)
+    participant.name.includes(searchInput)
   );
 
   let participantsOutput = (
@@ -21,8 +21,8 @@ const ParticipantsList = () => {
   if (filteredParticipants.length > 0) {
     participantsOutput = (
       <div className={ParticipantsListStyles.inner}>
-        {filteredParticipants.map((participant) => (
-          <Participant name={participant} />
+        {filteredParticipants.map((participant: IParticipant) => (
+          <Participant participant={participant} />
         ))}
       </div>
     );

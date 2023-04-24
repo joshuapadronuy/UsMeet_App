@@ -1,5 +1,10 @@
+export interface IParticipant {
+  id: string;
+  name: string;
+}
+
 export interface IParticipantsState {
-  participantsList: string[];
+  participantsList: IParticipant[];
   searchInput: string;
 }
 

@@ -1,7 +1,9 @@
+import { IParticipant } from "./ReduxState";
+
 export interface IParticipantsPayload {
-  participants?: string[];
+  participants?: IParticipant[];
   participantName?: string;
-  index?: number;
+  id?: string;
   newName?: string;
   searchInput?: string;
 }
