@@ -5,6 +5,7 @@ import NavCard from "../../components/UI/NavCard";
 import { camelize } from "../../util/camelize";
 
 const PollAvailability = () => {
+  //TODO IMPLEMENT THE USELAYOUTEFFECT FOR FLICKERING IMAGES
   //post a poll session
 
   const availabilityLinks = [

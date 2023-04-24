@@ -1,7 +1,17 @@
+import { MouseEventHandler } from "react";
 import ButtonStyles from "../../styles/Button.module.css";
 
-const Button = ({ children }) => {
-  return <button className={ButtonStyles.rootContainer}>{children}</button>;
+interface IProps {
+  children: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
+}
+
+const Button = ({ children, onClick }) => {
+  return (
+    <button className={ButtonStyles.rootContainer} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

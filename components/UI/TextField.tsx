@@ -1,13 +1,20 @@
 import { ChangeEventHandler } from "react";
 import TextFieldStyles from "../../styles/TextField.module.css";
+import FieldErrorStyles from "../../styles/FieldErrorStyles.module.css";
 
-interface IProps {
+interface IInputProps {
   placeholder: string;
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
-const TextField = ({ placeholder, value, onChange }: IProps) => {
+interface IErrorProps {
+  children: JSX.Element;
+  message: string;
+  hasError: boolean;
+}
+
+const Input = ({ placeholder, value, onChange }: IInputProps) => {
   return (
     <div className={TextFieldStyles.rootContainer}>
       <input
@@ -20,5 +27,20 @@ const TextField = ({ placeholder, value, onChange }: IProps) => {
     </div>
   );
 };
+
+const Error = ({ children, message, hasError }: IErrorProps) => {
+  if (!hasError) {
+    return <>{children}</>;
+  }
+
+  return (
+    <div>
+      {children}
+      <div className={FieldErrorStyles.error}>{message}</div>
+    </div>
+  );
+};
+
+const TextField = { Input: Input, Error: Error };
 
 export default TextField;

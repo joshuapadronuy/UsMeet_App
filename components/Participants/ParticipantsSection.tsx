@@ -1,10 +1,11 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import AddParticipant from "./ParticipantMenu/AddParticipant";
 import ParticipantsSectionStyles from "../../styles/ParticipantsSection.module.css";
 import TextField from "../UI/TextField";
-import { useState } from "react";
 import FillOutName from "./ParticipantMenu/FillOutName";
 import ParticipantsList from "./ParticipantsList/ParticipantsList";
-import { useDispatch, useSelector } from "react-redux";
 import { IReduxState } from "../../types/ReduxState";
 import { setSearchInput } from "../../store/slices/participants-slice";
 
@@ -32,7 +33,7 @@ const ParticipantsSection = () => {
       </div>
       {/* search and add new participant */}
       <div className={ParticipantsSectionStyles.tools}>
-        <TextField
+        <TextField.Input
           placeholder="Search Participant..."
           value={searchInput}
           onChange={searchFieldHandler}
@@ -40,7 +41,9 @@ const ParticipantsSection = () => {
         <AddParticipant onClickHandler={toggleAddParticipant} />
       </div>
       {/* adding new participant field */}
-      {showAddParticipant && <FillOutName />}
+      {showAddParticipant && (
+        <FillOutName setShowAddParticipant={setShowAddParticipant} />
+      )}
       <ParticipantsList />
     </div>
   );

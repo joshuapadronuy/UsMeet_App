@@ -1,9 +1,8 @@
-import React from "react";
 import SelectionGrid from "../GridComponents/SelectionGrid";
 import { DAYS_OF_WEEK } from "../../../enum/days-of-week";
 import useDayTimeList from "../../../hooks/useDayList";
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
-import OnMouseDownListener from "../../Events/on-mouse-down-listener";
+import OnMouseDownListener from "../../Events/OnMouseDownListener";
 
 const WeeklySelectionGrid = () => {
   const { state: sundayState, dispatch: sundayDispatch } = useDayTimeList(

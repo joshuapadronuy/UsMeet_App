@@ -30,11 +30,10 @@ export const participantsSlice = createSlice({
     setSearchInput: (state, action: IParticipantsAction) => {
       state.searchInput = action.payload.searchInput;
     },
-    //TODO IMPLEMENT
     addParticipant: (state, action: IParticipantsAction) => {
       const name = action.payload.participantName;
       const newParticipant = { id: UUIDv4(), name: name };
-      state.participantsList.push(newParticipant);
+      state.participantsList.unshift(newParticipant);
     },
     //TODO IMPLEMENT
     updateParticipant: (state, action: IParticipantsAction) => {
