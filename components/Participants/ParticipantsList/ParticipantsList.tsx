@@ -12,13 +12,25 @@ const ParticipantsList = () => {
     participant.includes(searchInput)
   );
 
-  return (
-    <div className={ParticipantsListStyles.rootContainer}>
+  let participantsOutput = (
+    <div className={ParticipantsListStyles.fallback}>
+      <p>No Participants</p>
+    </div>
+  );
+
+  if (filteredParticipants.length > 0) {
+    participantsOutput = (
       <div className={ParticipantsListStyles.inner}>
         {filteredParticipants.map((participant) => (
           <Participant name={participant} />
         ))}
       </div>
+    );
+  }
+
+  return (
+    <div className={ParticipantsListStyles.rootContainer}>
+      {participantsOutput}
     </div>
   );
 };
