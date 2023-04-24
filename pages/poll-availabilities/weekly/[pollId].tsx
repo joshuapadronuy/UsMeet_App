@@ -6,6 +6,7 @@ import PollWeeklyStyles from "../../../styles/PollWeekly.module.css";
 import WeeklyGrid from "../../../components/PollAvailabilities/Weekly/WeeklyGrid";
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
 import ParticipantsSection from "../../../components/Participants/ParticipantsSection";
+import PollMenu from "../../../components/PollAvailabilities/Menu/PollMenu";
 
 const PollAvailability = () => {
   const router = useRouter();
@@ -29,9 +30,13 @@ const PollAvailability = () => {
       </section>
       {/* poll section */}
       <section className={PollWeeklyStyles.pollSection}>
-        <StyledGridContainer columnsTemplate={"4fr 1fr"}>
-          <WeeklyGrid />
+        <StyledGridContainer
+          columnsTemplate={"4fr 1fr"}
+          rowsTemplate={"1fr 10fr"}
+        >
+          <PollMenu />
           <ParticipantsSection />
+          <WeeklyGrid />
         </StyledGridContainer>
       </section>
     </div>

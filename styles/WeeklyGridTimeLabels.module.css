@@ -1,18 +1,19 @@
 .rootContainer {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(49, 28.8px);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 4;
-  padding: 13px 0px;
+  margin-top: 16px;
 }
 
 .labelCell {
-  text-align: right;
-  padding-right: 10px;
+  height: 26.719px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
   user-select: none;
-  border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: small;
 }

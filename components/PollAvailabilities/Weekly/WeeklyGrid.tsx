@@ -8,10 +8,11 @@ const WeeklyGrid = () => {
   return (
     <div className={WeeklyGridStyles.rootContainer}>
       <StyledGridContainer columnsTemplate={"1fr 20fr"}>
-        <WeeklyGridHeader />
+        <div>
+          <WeeklyGridHeader />
+          <WeeklySelectionGrid />
+        </div>
         <WeeklyGridTimeLabels />
-        <WeeklySelectionGrid />
-        <div>Test</div>
       </StyledGridContainer>
     </div>
   );

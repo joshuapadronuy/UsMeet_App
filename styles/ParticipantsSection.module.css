@@ -1,6 +1,11 @@
 .rootContainer {
   background-image: url("/josiah-gardner-mountain.jpg");
   padding: 10px;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .header {

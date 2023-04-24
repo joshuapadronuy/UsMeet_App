@@ -1,6 +1,7 @@
 import { ITimeItem } from "../types/TimeItem";
 
 //initial value for day time list
+//TODO update time to start and end time object
 
 export const DAY_TIME_CELL_LIST: ITimeItem[] = [
   { time: "00:00", isSelected: false },
@@ -51,5 +52,4 @@ export const DAY_TIME_CELL_LIST: ITimeItem[] = [
   { time: "22:30", isSelected: false },
   { time: "23:00", isSelected: false },
   { time: "23:30", isSelected: false },
-  { time: "00:00", isSelected: false },
 ];
