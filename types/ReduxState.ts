@@ -1,3 +1,13 @@
+export interface IParticipantsState {
+  participantsList: string[];
+  searchInput: string;
+}
+
+export interface IMouseDownState {
+  isMouseDown: boolean;
+}
+
 export interface IReduxState {
-  mouseDown: { isMouseDown: boolean };
+  mouseDown: IMouseDownState;
+  participants: IParticipantsState;
 }

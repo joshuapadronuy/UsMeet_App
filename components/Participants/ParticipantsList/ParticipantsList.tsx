@@ -1,20 +1,21 @@
 import Participant from "./Participant";
 import ParticipantsListStyles from "../../../styles/ParticipantsList.module.css";
-
-const MOCK_PARTICIPANTS = [
-  "Joshua",
-  "Ron",
-  "Sewart",
-  "Hansel",
-  "Conrad",
-  "Ray",
-];
+import { useSelector } from "react-redux";
+import { IReduxState } from "../../../types/ReduxState";
 
 const ParticipantsList = () => {
+  const { participantsList, searchInput } = useSelector(
+    (state: IReduxState) => state.participants
+  );
+
+  const filteredParticipants = participantsList.filter((participant) =>
+    participant.includes(searchInput)
+  );
+
   return (
     <div className={ParticipantsListStyles.rootContainer}>
       <div className={ParticipantsListStyles.inner}>
-        {MOCK_PARTICIPANTS.map((participant) => (
+        {filteredParticipants.map((participant) => (
           <Participant name={participant} />
         ))}
       </div>

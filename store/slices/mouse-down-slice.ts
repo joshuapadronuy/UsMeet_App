@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IMouseDownState } from "../../types/ReduxState";
 
-const initialState = {
+const initialState: IMouseDownState = {
   isMouseDown: false,
 };
 

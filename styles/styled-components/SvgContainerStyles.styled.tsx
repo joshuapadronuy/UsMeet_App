@@ -4,7 +4,7 @@ import { SVG_SIZE } from "../../enum/svg-size";
 const determineSize = (size: string) => {
   switch (size) {
     case SVG_SIZE.SMALL:
-      return "30px";
+      return "20px";
     case SVG_SIZE.MEDIUM:
       return "40px";
     default:

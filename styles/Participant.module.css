@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: "row";
   align-items: center;
-  background: red;
-  border: black;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0px 7px;
+}
+
+.rootContainer:hover {
+  background-color: var(--accent100);
+}
+
+.inner {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+}
+
+.name {
+  font-size: medium;
+  margin-left: 10px;
 }
