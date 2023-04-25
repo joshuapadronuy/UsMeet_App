@@ -2,11 +2,11 @@ import { useRouter } from "next/router";
 
 import ShareLink from "../../../components/PollAvailabilities/ShareLink";
 import PageBanner from "../../../components/UI/PageBanner";
-import PollWeeklyStyles from "../../../styles/PollWeekly.module.css";
 import WeeklyGrid from "../../../components/PollAvailabilities/Weekly/WeeklyGrid";
 import { StyledGridContainer } from "../../../styles/styled-components/GridStyles.styled";
 import ParticipantsSection from "../../../components/Participants/ParticipantsSection";
 import PollMenu from "../../../components/PollAvailabilities/Menu/PollMenu";
+import PollWeeklyStyles from "../../../styles/PollWeekly.module.css";
 
 const PollAvailability = () => {
   const router = useRouter();
@@ -29,10 +29,10 @@ const PollAvailability = () => {
         </PageBanner.BannerImage>
       </section>
       {/* poll section */}
-      <section className={PollWeeklyStyles.pollSection}>
+      <section>
         <StyledGridContainer
           columnsTemplate={"4fr 1fr"}
-          rowsTemplate={"1fr 10fr"}
+          rowsTemplate={"1fr 9fr"}
         >
           <PollMenu />
           <ParticipantsSection />

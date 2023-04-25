@@ -1,16 +1,18 @@
 .rootContainer {
   background-image: url("/josiah-gardner-mountain.jpg");
   padding: 10px;
+  max-height: 100vh;
   display: grid;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 3;
 }
 
 .header {
   padding: 20px;
   background-image: url("/edu-lauton-lady-umbrella.jpg");
+  height: 125px;
 }
 
 .tools {

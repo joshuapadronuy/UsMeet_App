@@ -1,4 +1,7 @@
 .rootContainer {
-  overflow-y: scroll;
-  max-height: 100vh;
+  overflow-y: auto;
+  display: grid;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  max-height: 85vh;
 }

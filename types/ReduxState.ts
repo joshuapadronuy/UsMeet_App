@@ -1,3 +1,11 @@
+import { IMenu } from "./Menu";
+
+export interface IMenuState {
+  menuItems: IMenu[];
+  selectedMainMenu: string;
+  selectedSubMenu: string;
+}
+
 export interface IParticipant {
   id: string;
   name: string;
