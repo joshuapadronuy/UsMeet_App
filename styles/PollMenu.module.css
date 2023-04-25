@@ -8,6 +8,7 @@
 }
 
 .inner {
-  padding: 10px;
+  padding: 5px;
+  max-height: 15vh;
   background-color: var(--primary200);
 }

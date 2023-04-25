@@ -5,8 +5,8 @@ import { IMenuAction } from "../../types/MenuAction";
 
 const initialState: IMenuState = {
   menuItems: MENU,
-  selectedMainMenu: "",
-  selectedSubMenu: "",
+  selectedMainMenu: MENU[0].NAME,
+  selectedSubMenu: MENU[0].SUB_MENU[0],
 };
 
 export const menuSlice = createSlice({

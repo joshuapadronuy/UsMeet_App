@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
-export const StyledMenuItemContainer = styled.div`
-  padding: 10px;
+export const StyledSubMenuItemContainer = styled.div`
+  padding: 10px 20px;
+  min-width: 150px;
+  text-align: center;
   margin: 10px;
   color: white;
   background-color: ${({ isSelected }) =>
     isSelected ? "var(--accent100)" : "var(--accent300)"};
-  box-shadow: ${({ isSelected }) =>
-    isSelected ? "5px 5px var(--dark100)" : "5px 10px var(--dark100)"};
+  box-shadow: 3px 3px var(--dark100);
+  border: solid;
+  border-radius: 20px;
   cursor: pointer;
   font-size: ${({ fontSize }) => fontSize};
 

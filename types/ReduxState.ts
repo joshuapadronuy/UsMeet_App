@@ -21,6 +21,7 @@ export interface IMouseDownState {
 }
 
 export interface IReduxState {
+  menu: IMenuState;
   mouseDown: IMouseDownState;
   participants: IParticipantsState;
 }

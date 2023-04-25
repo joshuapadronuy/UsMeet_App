@@ -32,7 +32,7 @@ const PollAvailability = () => {
       <section>
         <StyledGridContainer
           columnsTemplate={"4fr 1fr"}
-          rowsTemplate={"1fr 9fr"}
+          rowsTemplate={"1fr 11fr"}
         >
           <PollMenu />
           <ParticipantsSection />

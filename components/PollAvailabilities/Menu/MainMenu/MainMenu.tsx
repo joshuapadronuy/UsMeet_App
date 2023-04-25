@@ -10,7 +10,7 @@ const MainMenu = ({ menu }: IProps) => {
   return (
     <div className={MainMenuStyles.rootContainer}>
       {menu.map((menuItem) => (
-        <MainMenuItem item={menuItem.NAME} />
+        <MainMenuItem menuItem={menuItem} />
       ))}
     </div>
   );
