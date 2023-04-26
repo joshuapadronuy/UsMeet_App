@@ -1,0 +1,10 @@
+.rootContainer {
+  background-color: var(--dark200);
+  color: white;
+  border: 10px double;
+  border-radius: 15px;
+  height: 40vh;
+  width: 40vw;
+  padding: 20px;
+  margin: 200px;
+}

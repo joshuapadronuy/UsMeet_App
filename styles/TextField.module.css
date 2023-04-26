@@ -1,5 +1,4 @@
 .rootContainer {
-  background-color: var(--transparent100);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,4 +14,9 @@
   font-size: 16px;
   width: 100%;
   font-family: Signika Negative, sans-serif;
+}
+
+.textField::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--dark200);
 }

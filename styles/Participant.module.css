@@ -6,6 +6,7 @@
   height: 40px;
   padding: 0px 7px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .selected {
@@ -15,8 +16,8 @@
   justify-content: space-between;
   height: 40px;
   padding: 0px 7px;
-  border: solid;
   border-radius: 10px;
+  background-color: var(--accent500);
 }
 
 .rootContainer:hover {
@@ -27,6 +28,11 @@
   display: flex;
   flex-direction: "row";
   align-items: center;
+}
+
+.name {
+  font-size: medium;
+  margin-left: 10px;
 }
 
 .name {

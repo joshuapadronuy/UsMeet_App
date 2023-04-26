@@ -6,13 +6,12 @@ import Button from "../../UI/Button";
 import TextField from "../../UI/TextField";
 import { addParticipant } from "../../../store/slices/participants-slice";
 import { IReduxState } from "../../../types/ReduxState";
-import FieldError from "../../UI/FieldError";
 
 interface IProps {
   setShowAddParticipant: Dispatch<SetStateAction<boolean>>;
 }
 
-const FillOutName = ({ setShowAddParticipant }) => {
+const FillOutName = ({ setShowAddParticipant }: IProps) => {
   const dispatch = useDispatch();
   const participantsList = useSelector(
     (state: IReduxState) => state.participants.participantsList
@@ -42,7 +41,6 @@ const FillOutName = ({ setShowAddParticipant }) => {
   };
 
   //TODO ADD ERROR HANDLER FOR BLANK NAME
-  //TODO ADD ERROR HANDLER FOR EXISTING NAME
 
   return (
     <div>

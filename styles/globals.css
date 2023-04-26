@@ -35,7 +35,9 @@ a {
   --accent200: #650b80;
   --accent300: #382746;
   --accent400: #4a3759;
+  --accent500: rgb(199, 135, 255);
   --dark100: #424242;
+  --dark200: #272727;
   --transparent100: rgb(255, 255, 255, 0.5);
   --transparent200: rgb(39, 39, 39, 0.98);
 }
