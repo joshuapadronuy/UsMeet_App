@@ -4,6 +4,7 @@ import { useState } from "react";
 import { StyledGridItem } from "../../../../styles/styled-components/GridStyles.styled";
 import { ITimeItem } from "../../../../types/TimeItem";
 import { IReduxState } from "../../../../types/ReduxState";
+import { PLOT_AVAILABILITY_SUB } from "../../../../enum/menu";
 
 interface IProps {
   timeItem: ITimeItem;
@@ -15,16 +16,32 @@ const SelectionCell = ({ timeItem }: IProps) => {
   const isMouseDown = useSelector(
     (state: IReduxState) => state.mouseDown.isMouseDown
   );
+  const { menuItems, selectedMainMenu } = useSelector(
+    (state: IReduxState) => state.menu
+  );
+  const mainMenuItem = menuItems.find(
+    (menuItem) => menuItem.NAME == selectedMainMenu
+  );
+
+  const mustSelectCell = (selectedSubMenu: string) => {
+    switch (selectedSubMenu) {
+      case PLOT_AVAILABILITY_SUB.ADD:
+        return true;
+      case PLOT_AVAILABILITY_SUB.REMOVE:
+        return false;
+      default:
+        return false;
+    }
+  };
 
   const toggleSelectedHandler = (event) => {
+    const mustSelect = mustSelectCell(mainMenuItem.selectedSubMenu);
     if (event.type == "mouseenter") {
       if (isMouseDown) {
-        setIsSelected(true);
-      } else {
-        setIsSelected(false);
+        setIsSelected(mustSelect);
       }
     } else if (event.type == "mousedown") {
-      setIsSelected((currIsSelected) => !currIsSelected);
+      setIsSelected(mustSelect);
     }
   };
 
