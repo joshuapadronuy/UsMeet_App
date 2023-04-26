@@ -11,17 +11,25 @@ interface IProps {
 
 const SubMenuItem = ({ subMenuItem }: IProps) => {
   const dispatch = useDispatch();
-  const selectedSubMenu = useSelector(
-    (state: IReduxState) => state.menu.selectedSubMenu
+  const { menuItems, selectedMainMenu } = useSelector(
+    (state: IReduxState) => state.menu
   );
   const menuItemPascal = toPascalCase(subMenuItem);
+  const mainMenuItem = menuItems.find(
+    (menuItem) => menuItem.NAME === selectedMainMenu
+  );
 
   const onSelectMenu = () => {
-    dispatch(setSelectedSubMenu({ menuSelected: subMenuItem }));
+    dispatch(
+      setSelectedSubMenu({
+        subMenuSelected: subMenuItem,
+      })
+    );
+    console.log({ menuItems });
   };
 
   const isCurrentlySelected = () => {
-    return selectedSubMenu === subMenuItem;
+    return mainMenuItem.selectedSubMenu === subMenuItem;
   };
 
   return (

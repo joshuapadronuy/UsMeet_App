@@ -6,7 +6,6 @@ import { IMenuAction } from "../../types/MenuAction";
 const initialState: IMenuState = {
   menuItems: MENU,
   selectedMainMenu: MENU[0].NAME,
-  selectedSubMenu: MENU[0].SUB_MENU[0],
 };
 
 export const menuSlice = createSlice({
@@ -17,10 +16,21 @@ export const menuSlice = createSlice({
       state.menuItems = action.payload.menu;
     },
     setSelectedMainMenu: (state, action: IMenuAction) => {
-      state.selectedMainMenu = action.payload.menuSelected;
+      state.selectedMainMenu = action.payload.mainMenuSelected;
     },
     setSelectedSubMenu: (state, action: IMenuAction) => {
-      state.selectedSubMenu = action.payload.menuSelected;
+      const mainMenu = state.selectedMainMenu;
+      const mainMenuIndex = state.menuItems.findIndex(
+        (menuItem) => menuItem.NAME === mainMenu
+      );
+
+      const newSubMenu = action.payload.subMenuSelected;
+      const updatedMenuItem = {
+        ...state.menuItems[mainMenuIndex],
+        selectedSubMenu: newSubMenu,
+      };
+
+      state.menuItems[mainMenuIndex] = updatedMenuItem;
     },
   },
 });

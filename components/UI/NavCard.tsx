@@ -8,7 +8,7 @@ const NavCard = ({ children, link }) => {
     <div className={CardStyles.container}>
       <div className={CardStyles.content}>{children}</div>
       <Link href={link}>
-        <StyledSvgContainer>
+        <StyledSvgContainer isClickable={true}>
           <ArrowRight />
         </StyledSvgContainer>
       </Link>

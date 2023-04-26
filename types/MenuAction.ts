@@ -2,7 +2,8 @@ import { IMenu } from "./Menu";
 
 export interface IMenuPayload {
   menu?: IMenu[];
-  menuSelected?: string;
+  mainMenuSelected?: string;
+  subMenuSelected?: string;
 }
 
 export interface IMenuAction {
