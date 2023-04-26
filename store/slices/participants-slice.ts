@@ -17,6 +17,7 @@ const MOCK_PARTICIPANTS = [
 const initialState: IParticipantsState = {
   participantsList: MOCK_PARTICIPANTS,
   searchInput: "",
+  selectedParticipant: null,
 };
 
 export const participantsSlice = createSlice({
@@ -29,6 +30,12 @@ export const participantsSlice = createSlice({
     },
     setSearchInput: (state, action: IParticipantsAction) => {
       state.searchInput = action.payload.searchInput;
+    },
+    setSelectedParticipant: (state, action: IParticipantsAction) => {
+      const selectedParticipant = state.participantsList.find(
+        (participant) => participant.id == action.payload.id
+      );
+      state.selectedParticipant = selectedParticipant;
     },
     addParticipant: (state, action: IParticipantsAction) => {
       const name = action.payload.participantName;
@@ -54,6 +61,7 @@ export const participantsSlice = createSlice({
 export const {
   setParticipants,
   setSearchInput,
+  setSelectedParticipant,
   addParticipant,
   updateParticipant,
   removeParticipant,

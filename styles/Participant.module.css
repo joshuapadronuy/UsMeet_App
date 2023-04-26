@@ -5,6 +5,18 @@
   justify-content: space-between;
   height: 40px;
   padding: 0px 7px;
+  border-radius: 10px;
+}
+
+.selected {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0px 7px;
+  border: solid;
+  border-radius: 10px;
 }
 
 .rootContainer:hover {

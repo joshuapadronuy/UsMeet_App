@@ -13,6 +13,7 @@ export interface IParticipant {
 export interface IParticipantsState {
   participantsList: IParticipant[];
   searchInput: string;
+  selectedParticipant: IParticipant;
 }
 
 export interface IMouseDownState {
