@@ -1,0 +1,22 @@
+.rootContainer {
+  background-color: var(--transparent100);
+  padding: 10px;
+}
+
+.inner {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  min-height: 10vh;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
+.fallback {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
